@@ -1,5 +1,4 @@
-package br.com.app.challenge.br.com.app.challenge.model;
-
+package br.com.app.challenge.model;
 /**
  * Created by gvdambros on 10/7/17.
  */

@@ -1,5 +1,4 @@
-package br.com.app.challenge.br.com.app.challenge.model;
-
+package br.com.app.challenge.model;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -20,6 +19,7 @@ public class Incidente {
     List<String> comentarios;
     // Local //
     String descricao;
+    Status_Do_Incidente status;
 
     public Incidente(Tipo_De_Incidente tipo, Date dia_do_incidente, /*Local,*/ String descricao) {
         this.id = gerador_de_id++;
@@ -29,6 +29,7 @@ public class Incidente {
         this.numereros_de_joinhas = 0;
         this.comentarios = new ArrayList<String>();
         this.dia_de_finalizacao = new Date();
+        this.status = Status_Do_Incidente.SOLICITADO;
     }
 
     public Tipo_De_Incidente getTipo() {

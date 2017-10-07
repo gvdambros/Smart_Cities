@@ -8,26 +8,24 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import java.lang.reflect.Array;
 import java.util.Date;
 
-import br.com.app.challenge.br.com.app.challenge.model.Incidente;
-import br.com.app.challenge.br.com.app.challenge.model.Tipo_De_Incidente;
-import br.com.app.challenge.br.com.app.challenge.model.Usuario_Comum;
-import br.com.app.challenge.utils.Constants;
+import br.com.app.challenge.model.Incidente;
+import br.com.app.challenge.model.Tipo_De_Incidente;
+import br.com.app.challenge.model.Usuario_Comum;
 
-public class MainActivity extends AppCompatActivity {
+public class List_Incident_Activity extends AppCompatActivity {
 
     Usuario_Comum mock_usuario_comum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_list_incident);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -50,6 +48,13 @@ public class MainActivity extends AppCompatActivity {
                 mock_usuario_comum.getIncidentesToStringArray());
         ListView myReportsList = (ListView) findViewById(R.id.myReportsList);
         myReportsList.setAdapter(adapter);
+
+        myReportsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+                // vai para a janela do incidente;
+            }
+        });
 
 
 
