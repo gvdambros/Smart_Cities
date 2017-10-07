@@ -8,8 +8,21 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.lang.reflect.Array;
+import java.util.Date;
+
+import br.com.app.challenge.br.com.app.challenge.model.Incidente;
+import br.com.app.challenge.br.com.app.challenge.model.Tipo_De_Incidente;
+import br.com.app.challenge.br.com.app.challenge.model.Usuario_Comum;
+import br.com.app.challenge.utils.Constants;
 
 public class MainActivity extends AppCompatActivity {
+
+    Usuario_Comum mock_usuario_comum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +39,25 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        mock_usuario_comum = new Usuario_Comum("Gustavo", "1234", "João Pessoa");
+        Incidente mock_incidente_ambiental = new Incidente(Tipo_De_Incidente.AMBIENTAL, new Date(), "A casa caiu.");
+        Incidente mock_incidente_eletrico = new Incidente(Tipo_De_Incidente.ELETRICO, new Date(), "A casa caiu.");
+        mock_usuario_comum.addIncidentes(mock_incidente_ambiental);
+        mock_usuario_comum.addIncidentes(mock_incidente_eletrico);
+
+        ArrayAdapter adapter = new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,
+                mock_usuario_comum.getIncidentesToStringArray());
+        ListView myReportsList = (ListView) findViewById(R.id.myReportsList);
+        myReportsList.setAdapter(adapter);
+
+
+
+
+
+
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
