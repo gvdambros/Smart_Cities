@@ -72,10 +72,9 @@
         android:layout_marginTop="142dp"
         app:layout_constraintHorizontal_bias="0.513" />
 
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <fragment
         android:id="@+id/fragment"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:name="com.google.android.gms.maps.MapFragment"
         android:layout_width="315dp"
         android:layout_height="174dp"
         android:layout_marginBottom="16dp"
@@ -86,15 +85,6 @@
         app:layout_constraintVertical_bias="0.333"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="16dp"
-
         app:layout_constraintLeft_toLeftOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="245dp"
-        android:layout_height="113dp"
-        android:visibility="visible"
-        app:srcCompat="@drawable/foto3"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="-10dp" />
 </android.support.constraint.ConstraintLayout>

@@ -15,7 +15,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class Near_Incident_Activity extends FragmentActivity implements OnMapReadyCallback {
 
-    GoogleMap map;
+        GoogleMap map;
 
 @Override
     protected void onCreate(Bundle savedInstanceState) {

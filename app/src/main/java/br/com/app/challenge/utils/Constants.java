@@ -1,5 +1,10 @@
 package br.com.app.challenge.utils;
 
+import java.util.List;
+
+import br.com.app.challenge.model.Incidente;
+import br.com.app.challenge.model.Usuario_Comum;
+
 /**
  * Created by gvdambros on 10/7/17.
  */
