@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\mathe\.android\build-cache\306aa92c7c225c3b70448d1c7332cbe24ef599f2\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="C:\Users\mathe\OneDrive\Documentos\GitHub\Smart_Cities\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f1148277d79523cdc8ea4ae7c018f26aff4d6399\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\mathe\.android\build-cache\8651c69255325c5db172f5f03508dce627500335\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="C:\Users\mathe\OneDrive\Documentos\GitHub\Smart_Cities\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1348e57016762331747b36800968dc0adf794f5b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\mathe\.android\build-cache\e6449f3c521d65fe336602f5ed83caf742c4bef7\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="C:\Users\mathe\OneDrive\Documentos\GitHub\Smart_Cities\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_412f3c596bdc87d0ae4f641824a57dcb1cfa6b64\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\mathe\.android\build-cache\d76fb8c11c3884fc537bf7457329178302c83b1d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\mathe\OneDrive\Documentos\GitHub\Smart_Cities\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_46247940c07f7955b9d4280e12e0c9aaf0ca4a2a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\mathe\.android\build-cache\87fae9c8010e49a4917607275c7e1e846847fbe3\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="C:\Users\mathe\OneDrive\Documentos\GitHub\Smart_Cities\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f56b7707d42cc68cb671434cca3b4f5f48d4cafd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\mathe\.android\build-cache\6a8694825b8dca734295d67c0d2a2749039edbbe\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="C:\Users\mathe\OneDrive\Documentos\GitHub\Smart_Cities\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7077564858fe0fa742081151d58904f77bb1d296\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\mathe\.android\build-cache\979c0f853bad6c1a52a7689b4214cdeb031bbd4e\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="C:\Users\mathe\OneDrive\Documentos\GitHub\Smart_Cities\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f111d79d647dd8c01b25b8b96c134d6f2de366d0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\mathe\.android\build-cache\52e1a111be9f3fe56e1256d1bb2eea44e95203b0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="C:\Users\mathe\OneDrive\Documentos\GitHub\Smart_Cities\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_fa641145df2e0292d8950cb0dc212a1ec8c09b86\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\mathe\OneDrive\Documentos\GitHub\Smart_Cities\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="08bd992921dc0d28f008fed4e26f83f500fad99a">
+        <dex dex="C:\Users\mathe\OneDrive\Documentos\GitHub\Smart_Cities\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_d043b57a7704bd7b8b54eff4ea1e0c6fba7580e9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\mathe\.android\build-cache\2759cb9be954e3ea7053c2f5b16efe3d2fec6a53\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="C:\Users\mathe\OneDrive\Documentos\GitHub\Smart_Cities\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e34e528fc2bcc5ab2605c9b57a1bd7153cd7fc5c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\mathe\.android\build-cache\7b1c3601309b899528a9066f18e8e61cdf20f8eb\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="C:\Users\mathe\OneDrive\Documentos\GitHub\Smart_Cities\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0b63a4be3d5d38aac34d70c1b9d21673521124e0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\mathe\.android\build-cache\967aa810b0ab427d064a4b80659b1043d74fe632\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="C:\Users\mathe\OneDrive\Documentos\GitHub\Smart_Cities\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_8389dd62882ea4e793513a63da3261f8e4d0f1fa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\mathe\.android\build-cache\c765e39ef53877189e67b97d72d7bcac922b334d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="C:\Users\mathe\OneDrive\Documentos\GitHub\Smart_Cities\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_738b2e43b6c834ee92708014c501783b2915938a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\mathe\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\mathe\OneDrive\Documentos\GitHub\Smart_Cities\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_0ae471f4f266f698ab9339540f4eecbde8dbfbe9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\mathe\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="C:\Users\mathe\OneDrive\Documentos\GitHub\Smart_Cities\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-26.0.0-alpha1_b81834fd6c1097427a696cb247d96e9a9ce781d6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\mathe\.android\build-cache\637238df8d0d9e7dee6ed2db05e87ea2a9c39bf0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\mathe\OneDrive\Documentos\GitHub\Smart_Cities\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0fd92d910e69141895e95982ebd5a60e7546d45f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\mathe\OneDrive\Documentos\GitHub\Smart_Cities\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\mathe\OneDrive\Documentos\GitHub\Smart_Cities\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_be6c3e134dc1c9a4865f6684f19cbbfbcf09dd8e\classes.dex" />
+    </item>
+
+</items>
