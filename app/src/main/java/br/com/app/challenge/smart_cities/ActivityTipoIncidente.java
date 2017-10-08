@@ -13,7 +13,7 @@ public class ActivityTipoIncidente extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tipo_incidente);
+        setContentView(R.layout.content_tipo_incidente);
 
         final Button button = (Button)findViewById(R.id.btConfirmar);
         final RadioButton rb;

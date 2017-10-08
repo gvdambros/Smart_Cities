@@ -2,25 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.app.challenge.smart_cities">
 
-
-    <uses-feature android:name="android.hardware.camera2.full" />
-    <uses-feature android:name="android.hardware.camera2.autofocus" />
-    <uses-feature android:name="android.hardware.camera2.full" />
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-permission android:name="android.permission.CAMERA"
-        android:required="true" />
-
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
     <uses-feature
-        android:required="true"/>
         android:glEsVersion="0x00020000"
+        android:required="true"/>
+
     <permission
-        android:protectionLevel="signature"
-        android:name="com.example.permission.MAPS_RECEIVE"/>
+        android:name="com.example.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature"/>
     <uses-permission android:name="com.example.permission.MAPS_RECEIVE"/>
+
     <application
 
         android:allowBackup="true"
@@ -35,8 +30,8 @@
             android:value="AIzaSyD3w-_2qTcwqQPH3VRw_ye-2o_c8SL5iG8"/>
         >
         <meta-data
-        android:name="com.google.android.gms.version"
-        android:value="@integer/google_play_services_version" />
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <uses-permission android:name="android.permission.INTERNET" />
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -87,9 +82,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityCadastroIncidente" />
-        <activity android:name=".ActivityTipoIncidente" />
-        <activity android:name=".AndroidCameraApi"></activity>
+        <activity
+            android:name=".ActivityTipoIncidente"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActivityCadastroIncidente"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AndroidCameraApi"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

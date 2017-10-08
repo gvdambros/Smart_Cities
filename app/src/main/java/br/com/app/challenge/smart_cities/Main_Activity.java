@@ -46,8 +46,8 @@ public class Main_Activity extends AppCompatActivity {
         new_incident_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent intent = new Intent(Main_Activity.this, ActivityCadastroIncidente.class);
-                //startActivity(intent);
+                Intent intent = new Intent(Main_Activity.this, ActivityTipoIncidente.class);
+                startActivity(intent);
             }
         });
 
