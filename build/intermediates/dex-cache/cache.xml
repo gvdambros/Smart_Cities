@@ -3,42 +3,6 @@
 
     <item
         is-multidex="true"
-        jar="/home/gvdambros/.android/build-cache/ee227509fff00d86de5b970a2f74e9c6a41e0db0/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.0"
-        sha1="6178e31397c24ab1bfc09766832cdcf519621eb7">
-        <dex dex="/home/gvdambros/Desktop/Smart_Cities/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ad4f39a55c0d5fca0ccc0da683e06388e674ed48/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/gvdambros/Desktop/Smart_Cities/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.0"
-        sha1="2ec5b63d3c5b4ce2469dbe66fb3171ff87bcaeef">
-        <dex dex="/home/gvdambros/Desktop/Smart_Cities/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_8d879dd8482f4afe1d6bb10d972ed024602aa64d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/gvdambros/.android/build-cache/cfdb10a8883427bc7bca7ddbd4b732b630c338b9/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.0"
-        sha1="d695dc4247690369d66c022c6d18190155c61fcd">
-        <dex dex="/home/gvdambros/Desktop/Smart_Cities/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_466a9ec487187ce006a9b895a3a1751d97629fe2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/gvdambros/.android/build-cache/a57d0734807631e1cd681bcc30ac3f9c0e3c05fe/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.0"
-        sha1="21160c044ba984fb2e33b833c89a496becb85cfd">
-        <dex dex="/home/gvdambros/Desktop/Smart_Cities/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ebcbe6582c65e109e7d084bb2124db49ab000a34/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/gvdambros/Desktop/Smart_Cities/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -48,12 +12,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/gvdambros/.android/build-cache/cefab2b39dae2423f0054227dc0931af972b7ee7/output/jars/classes.jar"
+        jar="/home/gvdambros/Desktop/Smart_Cities/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.0"
-        sha1="4b70c5ad05857b8b3b2458777e1b489a96d82f05">
-        <dex dex="/home/gvdambros/Desktop/Smart_Cities/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_12bb2900be963a516cf91744444e7f017f0170f1/classes.dex" />
+        sha1="169b9d110bc6d236092672471926ae8d8de43bfa">
+        <dex dex="/home/gvdambros/Desktop/Smart_Cities/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_8d879dd8482f4afe1d6bb10d972ed024602aa64d/classes.dex" />
     </item>
 
 </items>

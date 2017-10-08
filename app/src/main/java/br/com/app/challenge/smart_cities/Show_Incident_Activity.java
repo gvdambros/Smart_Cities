@@ -1,28 +1,28 @@
 package br.com.app.challenge.smart_cities;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.RatingBar;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-import java.util.Date;
-
+import android.support.v4.app.FragmentActivity;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import br.com.app.challenge.model.Incidente;
-import br.com.app.challenge.model.Tipo_De_Incidente;
 import br.com.app.challenge.utils.Constants;
 
-public class Show_Incident_Activity extends AppCompatActivity {
+public class Show_Incident_Activity extends FragmentActivity implements OnMapReadyCallback {
+
+    GoogleMap map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,34 +30,57 @@ public class Show_Incident_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_show_incident);
         TextView nome = (TextView) findViewById(R.id.user_name);
         nome.setText(Constants._user_name);
-        RatingBar nivel = (RatingBar) findViewById(R.id.user_level);
-        nivel.setRating(Constants._user_rate);
-        TextView status = (TextView) findViewById(R.id.status_text);
-        Incidente mock_incident = new Incidente(Tipo_De_Incidente.AMBIENTAL, new Date(), "a casa caiu");
-        status.setText(mock_incident.toString());
+        TextView status = (TextView) findViewById(R.id.incident_status);
+
+        Incidente mock_incident = (Incidente) getIntent().getSerializableExtra("Incident");
+        status.setText(mock_incident.getStatus().toString());
+
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map_view);
+        mapFragment.getMapAsync(this);
+
+        ImageView foto = (ImageView) findViewById(R.id.user_photo_view);
+        foto.setImageDrawable( resize( getDrawable(R.drawable.user_photo) ) );
 
     }
 
+    private Drawable resize(Drawable image) {
+        Bitmap b = ((BitmapDrawable)image).getBitmap();
+        Bitmap bitmapResized = Bitmap.createScaledBitmap(b, 50, 50, false);
+        return new BitmapDrawable(getResources(), bitmapResized);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.near_incident) {
+            // talvez seja pai do show
+            Intent intent = new Intent(Show_Incident_Activity.this, Near_Incident_Activity.class);
+            startActivity(intent);
             return true;
         }
-
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        map = googleMap;
+        LatLng poa = new LatLng(-30.026090, -51.213359);
+        map.setMinZoomPreference(15);
+        map.addMarker(new MarkerOptions().position(poa).title("Marker in Sydney"));
+        map.moveCamera(CameraUpdateFactory.newLatLng(poa));
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
     }
 }

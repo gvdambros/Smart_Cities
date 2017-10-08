@@ -1,5 +1,6 @@
 package br.com.app.challenge.smart_cities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,6 +16,7 @@ import android.widget.ListView;
 import java.util.Date;
 
 import br.com.app.challenge.model.Incidente;
+import br.com.app.challenge.model.Status_Do_Incidente;
 import br.com.app.challenge.model.Tipo_De_Incidente;
 import br.com.app.challenge.model.Usuario_Comum;
 
@@ -28,15 +30,6 @@ public class List_Incident_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_list_incident);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         mock_usuario_comum = new Usuario_Comum("Gustavo", "1234", "João Pessoa");
         Incidente mock_incidente_ambiental = new Incidente(Tipo_De_Incidente.AMBIENTAL, new Date(), "A casa caiu.");
@@ -52,14 +45,12 @@ public class List_Incident_Activity extends AppCompatActivity {
         myReportsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                // vai para a janela do incidente;
+                Intent intent = new Intent(List_Incident_Activity.this, Show_Incident_Activity.class);
+                mock_usuario_comum.getMeus_incidentes().get(position).setStatus(Status_Do_Incidente.CONLUIDO);
+                intent.putExtra("Incident", mock_usuario_comum.getMeus_incidentes().get(position));
+                startActivity(intent);
             }
         });
-
-
-
-
-
 
     }
 
@@ -79,7 +70,9 @@ public class List_Incident_Activity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.near_incident) {
+            Intent intent = new Intent(List_Incident_Activity.this, Near_Incident_Activity.class);
+            startActivity(intent);
             return true;
         }
 

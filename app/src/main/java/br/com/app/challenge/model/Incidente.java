@@ -1,4 +1,5 @@
 package br.com.app.challenge.model;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -7,7 +8,7 @@ import java.util.List;
  * Created by gvdambros on 10/7/17.
  */
 
-public class Incidente {
+public class Incidente implements Serializable {
 
     static int gerador_de_id = 1;
 
@@ -82,6 +83,30 @@ public class Incidente {
 
     public String toString(){
         return "ID: " + this.id + " Data: " + this.dia_do_incidente.toString();
+    }
+
+    public static int getGerador_de_id() {
+        return gerador_de_id;
+    }
+
+    public static void setGerador_de_id(int gerador_de_id) {
+        Incidente.gerador_de_id = gerador_de_id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Status_Do_Incidente getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status_Do_Incidente status) {
+        this.status = status;
     }
 
 }
