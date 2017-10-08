@@ -1,4 +1,5 @@
 package br.com.app.challenge.model;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -7,7 +8,7 @@ import java.util.List;
  * Created by gvdambros on 10/7/17.
  */
 
-public class Incidente {
+public class Incidente implements Serializable {
 
     static int gerador_de_id = 1;
 
@@ -19,6 +20,7 @@ public class Incidente {
     List<String> comentarios;
     // Local //
     String descricao;
+    Status_Do_Incidente status;
 
     public Incidente(Tipo_De_Incidente tipo, Date dia_do_incidente, /*Local,*/ String descricao) {
         this.id = gerador_de_id++;
@@ -28,6 +30,7 @@ public class Incidente {
         this.numereros_de_joinhas = 0;
         this.comentarios = new ArrayList<String>();
         this.dia_de_finalizacao = new Date();
+        this.status = Status_Do_Incidente.SOLICITADO;
     }
 
     public Tipo_De_Incidente getTipo() {
@@ -80,6 +83,30 @@ public class Incidente {
 
     public String toString(){
         return "ID: " + this.id + " Data: " + this.dia_do_incidente.toString();
+    }
+
+    public static int getGerador_de_id() {
+        return gerador_de_id;
+    }
+
+    public static void setGerador_de_id(int gerador_de_id) {
+        Incidente.gerador_de_id = gerador_de_id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Status_Do_Incidente getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status_Do_Incidente status) {
+        this.status = status;
     }
 
 }
