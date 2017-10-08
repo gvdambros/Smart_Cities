@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioButton
+        android:id="@+id/rbHidraulico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:gravity="fill_vertical"
+        android:text="Hidraulico"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="78dp" />
+
+    <RadioButton
+        android:id="@+id/rbEletrico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:gravity="fill_vertical"
+        android:text="Eletrico"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="78dp" />
+
+    <RadioButton
+        android:id="@+id/rbRuas_E_Calcadas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:gravity="fill_vertical"
+        android:text="Ruas e Calcadas"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="159dp" />
+
+    <RadioButton
+        android:id="@+id/rbAmbiental"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:gravity="fill_vertical"
+        android:text="Ambiental"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="159dp" />
+
+    <RadioButton
+        android:id="@+id/rbLixo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:gravity="fill_vertical"
+        android:text="Lixo"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="239dp" />
+
+    <RadioButton
+        android:id="@+id/rbMockUp6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:gravity="fill_vertical"
+        android:text="MockUp6"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="239dp" />
+
+    <Button
+        android:id="@+id/btConfirmar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmar"
+        tools:layout_editor_absoluteY="418dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.501" />
+</android.support.constraint.ConstraintLayout>
