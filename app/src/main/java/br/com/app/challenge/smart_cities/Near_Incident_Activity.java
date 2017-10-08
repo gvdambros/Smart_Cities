@@ -9,6 +9,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -16,14 +17,13 @@ public class Near_Incident_Activity extends FragmentActivity implements OnMapRea
 
     GoogleMap map;
 
-    @Override
+@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_near_incident);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map_view);
         mapFragment.getMapAsync(this);
-
     }
 
     @Override
@@ -46,10 +46,21 @@ public class Near_Incident_Activity extends FragmentActivity implements OnMapRea
     @Override
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
-        LatLng poa = new LatLng(-30.026090, -51.213359);
         map.setMinZoomPreference(15);
-        map.addMarker(new MarkerOptions().position(poa).title("Marker in Sydney"));
+
+        LatLng poa = new LatLng(-30.026090, -51.213359);
         map.moveCamera(CameraUpdateFactory.newLatLng(poa));
+        map.addMarker(new MarkerOptions().position(poa).title("Poste com luzes quimadas").snippet("Solicitado").
+                icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+        LatLng casaMatheus = new LatLng(-30.033783, -51.222188);
+        map.addMarker(new MarkerOptions().position(casaMatheus).title("Árvore Caida na Rua").snippet("Em Atendimento").
+                icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+
+        LatLng buracoNaRua = new LatLng(-30.024282, -51.214292);
+        map.addMarker(new MarkerOptions().position(buracoNaRua).title("Buraco na Via").snippet("Concluido").
+                icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE + BitmapDescriptorFactory.HUE_GREEN)));
+
     }
 
     @Override

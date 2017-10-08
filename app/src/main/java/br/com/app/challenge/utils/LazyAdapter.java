@@ -33,13 +33,11 @@ public class LazyAdapter extends ArrayAdapter<String> {
 
         TextView txtTitle = (TextView) rowView.findViewById(R.id.item);
         ImageView imageView_left = (ImageView) rowView.findViewById(R.id.icon_left);
-        TextView extratxt = (TextView) rowView.findViewById(R.id.textView1);
         ImageView imageView_right = (ImageView) rowView.findViewById(R.id.icon_right);
 
         txtTitle.setText(itemname[position]);
         imageView_left.setImageResource(imgid_l[position]);
         imageView_right.setImageResource(imgid_r[position]);
-        extratxt.setText("Description "+itemname[position]);
         return rowView;
     };
 }

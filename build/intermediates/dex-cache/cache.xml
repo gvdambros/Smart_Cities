@@ -16,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="26.0.0"
-        sha1="869895c7c7e54bb4d2fe4f55a528e2cc19392c6e">
+        sha1="45ec476f83c7a61ff7eb1da0e13710e6c114e015">
         <dex dex="/home/gvdambros/Desktop/Smart_Cities/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_8d879dd8482f4afe1d6bb10d972ed024602aa64d/classes.dex" />
     </item>
 

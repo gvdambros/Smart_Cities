@@ -19,10 +19,12 @@ public class Incidente implements Serializable {
     int numereros_de_joinhas;
     List<String> comentarios;
     // Local //
+    String nome;
     String descricao;
     Status_Do_Incidente status;
+    String nome_autor;
 
-    public Incidente(Tipo_De_Incidente tipo, Date dia_do_incidente, /*Local,*/ String descricao) {
+    public Incidente(Tipo_De_Incidente tipo, Date dia_do_incidente, /*Local,*/ String nome, String descricao, String nome_autor) {
         this.id = gerador_de_id++;
         this.tipo = tipo;
         this.dia_do_incidente = dia_do_incidente;
@@ -31,6 +33,24 @@ public class Incidente implements Serializable {
         this.comentarios = new ArrayList<String>();
         this.dia_de_finalizacao = new Date();
         this.status = Status_Do_Incidente.SOLICITADO;
+        this.nome_autor = nome_autor;
+        this.nome = nome;
+    }
+
+    public String getAutor() {
+        return nome_autor;
+    }
+
+    public void setAutor(String nome_autor) {
+        this.nome_autor = nome_autor;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public Tipo_De_Incidente getTipo() {

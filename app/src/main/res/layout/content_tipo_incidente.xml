@@ -9,96 +9,82 @@
         android:id="@+id/btConfirmar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_weight="1"
         android:text="Confirmar Tipo"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup3"
+        app:layout_constraintHorizontal_bias="0.504" />
 
-    <GridLayout
+    <RadioGroup
         android:layout_width="368dp"
-        android:layout_height="300dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:id="@+id/gridLayout">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:weightSum="1"
+        android:id="@+id/radioGroup3">
 
-        <RadioButton
-            android:id="@+id/rbEletrico"
+        <RadioGroup
             android:layout_width="184dp"
-            android:layout_height="100dp"
-            android:checked="true"
-            android:gravity="fill_vertical"
-            android:text="Eletrico"
-            android:visibility="visible"
-            tools:layout_editor_absoluteX="220dp"
-            tools:layout_editor_absoluteY="78dp" />
+            android:layout_height="300dp"
+            android:orientation="vertical">
 
-        <RadioButton
-            android:id="@+id/rbHidraulico"
-            android:layout_width="184dp"
-            android:layout_height="100dp"
-            android:checked="true"
-            android:gravity="fill_vertical"
-            android:text="Hidraulico"
-            android:visibility="visible"
-            tools:layout_editor_absoluteX="45dp"
-            tools:layout_editor_absoluteY="78dp" />
+            <RadioButton
+                android:id="@+id/rb"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Elétrico"
+                android:textSize="13sp" />
 
-        <RadioButton
-            android:id="@+id/rbLixo"
-            android:layout_width="184dp"
-            android:layout_height="100dp"
-            android:layout_column="0"
-            android:layout_row="1"
-            android:checked="true"
-            android:gravity="fill_vertical"
-            android:text="Lixo"
-            android:visibility="visible"
-            tools:layout_editor_absoluteX="38dp"
-            tools:layout_editor_absoluteY="239dp" />
+            <RadioButton
+                android:id="@+id/radio_one5Id"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Rua e Calçadas"
+                android:textSize="13sp" />
 
-        <RadioButton
-            android:id="@+id/rbAmbiental"
-            android:layout_width="184dp"
-            android:layout_height="100dp"
-            android:layout_column="1"
-            android:layout_row="1"
-            android:checked="true"
-            android:gravity="fill_vertical"
-            android:text="Ambiental"
-            android:visibility="visible"
-            tools:layout_editor_absoluteX="220dp"
-            tools:layout_editor_absoluteY="159dp" />
+            <RadioButton
+                android:id="@+id/radio_one10Id"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ambiental"
+                android:textSize="13sp" />
+        </RadioGroup>
 
-        <RadioButton
-            android:id="@+id/rbRuas_E_Calcadas"
+        <RadioGroup
             android:layout_width="184dp"
-            android:layout_height="100dp"
-            android:layout_column="0"
-            android:layout_row="2"
-            android:checked="true"
-            android:gravity="fill_vertical"
-            android:text="Ruas e Calcadas"
-            android:visibility="visible"
-            tools:layout_editor_absoluteX="38dp"
-            tools:layout_editor_absoluteY="159dp" />
+            android:layout_height="300dp"
+            android:orientation="vertical">
 
-        <RadioButton
-            android:id="@+id/rbMockUp6"
-            android:layout_width="184dp"
-            android:layout_height="100dp"
-            android:layout_column="1"
-            android:layout_row="2"
-            android:checked="true"
-            android:gravity="fill_vertical"
-            android:text="MockUp6"
-            android:visibility="visible"
-            tools:layout_editor_absoluteX="184dp"
-            tools:layout_editor_absoluteY="239dp" />
-    </GridLayout>
+            <RadioButton
+                android:id="@+id/radio_one65Id"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Lixo"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/radio_one75Id"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Saneamento"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/radio_one85Id"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Outros"
+                android:textSize="13sp" />
+        </RadioGroup>
+    </RadioGroup>
+
 </android.support.constraint.ConstraintLayout>

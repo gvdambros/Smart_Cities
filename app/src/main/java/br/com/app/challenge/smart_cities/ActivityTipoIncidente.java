@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class ActivityTipoIncidente extends AppCompatActivity {
@@ -26,7 +30,7 @@ public class ActivityTipoIncidente extends AppCompatActivity {
             }
         });
 
-
+        //RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
 
 
     }

@@ -28,12 +28,10 @@ public class Show_Incident_Activity extends FragmentActivity implements OnMapRea
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_incident);
-        TextView nome = (TextView) findViewById(R.id.user_name);
-        nome.setText(Constants._user_name);
-        TextView status = (TextView) findViewById(R.id.incident_status);
+        TextView description = (TextView) findViewById(R.id.incident_description);
 
         Incidente mock_incident = (Incidente) getIntent().getSerializableExtra("Incident");
-        status.setText(mock_incident.getStatus().toString());
+        description.setText(mock_incident.getDescricao());
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map_view);
@@ -41,6 +39,12 @@ public class Show_Incident_Activity extends FragmentActivity implements OnMapRea
 
         ImageView foto = (ImageView) findViewById(R.id.user_photo_view);
         foto.setImageDrawable( resize( getDrawable(R.drawable.user_photo) ) );
+
+        TextView user_name_view = (TextView) findViewById(R.id.incident_name);
+        user_name_view.setText(mock_incident.getNome());
+
+        TextView user_mail_view = (TextView) findViewById(R.id.incident_author);
+        user_mail_view.setText("Incidente criado por " + mock_incident.getAutor());
 
     }
 

@@ -25,15 +25,6 @@ public class List_Incident_Activity extends AppCompatActivity {
 
     Usuario_Comum mock_usuario_comum;
 
-    Integer[] imgid={
-            R.drawable.user_photo,
-            R.drawable.user_photo
-    };
-
-    String[] itemname ={
-            "Safari",
-            "Camera"
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +34,26 @@ public class List_Incident_Activity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         mock_usuario_comum = new Usuario_Comum("Gustavo", "1234", "João Pessoa");
-        Incidente mock_incidente_ambiental = new Incidente(Tipo_De_Incidente.AMBIENTAL, new Date(), "A casa caiu.");
-        Incidente mock_incidente_eletrico = new Incidente(Tipo_De_Incidente.ELETRICO, new Date(), "A casa caiu.");
+        Incidente mock_incidente_ambiental = new Incidente(Tipo_De_Incidente.RUAS_E_CALCADAS, new Date(), "Buraco na rua", "A casa caiu.", mock_usuario_comum.getNome());
+        Incidente mock_incidente_eletrico = new Incidente(Tipo_De_Incidente.ELETRICO, new Date(), "Falta de luz na rua", "A casa caiu.", mock_usuario_comum.getNome());
         mock_usuario_comum.addIncidentes(mock_incidente_ambiental);
         mock_usuario_comum.addIncidentes(mock_incidente_eletrico);
 
-        LazyAdapter adapter = new LazyAdapter(this, itemname, imgid, imgid);
+        Integer[] imgid_r;
+        Integer[] imgid_l;
+        String[] itemname;
+
+        imgid_r = new Integer[mock_usuario_comum.getMeus_incidentes().size()];
+        imgid_l = new Integer[mock_usuario_comum.getMeus_incidentes().size()];
+        itemname = new String[mock_usuario_comum.getMeus_incidentes().size()];
+
+        for(int i = 0; i < mock_usuario_comum.getMeus_incidentes().size(); i++){
+            imgid_r[i] = mock_usuario_comum.getMeus_incidentes().get(i).getStatus().toIconID();
+            imgid_l[i] = mock_usuario_comum.getMeus_incidentes().get(i).getTipo().toIconID();
+            itemname[i] = mock_usuario_comum.getMeus_incidentes().get(i).getTipo().toString();
+        }
+
+        LazyAdapter adapter = new LazyAdapter(this, itemname, imgid_l, imgid_r);
         ListView myReportsList = (ListView) findViewById(R.id.myReportsList);
         myReportsList.setAdapter(adapter);
 
