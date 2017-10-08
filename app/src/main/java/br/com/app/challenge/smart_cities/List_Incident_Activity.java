@@ -19,10 +19,21 @@ import br.com.app.challenge.model.Incidente;
 import br.com.app.challenge.model.Status_Do_Incidente;
 import br.com.app.challenge.model.Tipo_De_Incidente;
 import br.com.app.challenge.model.Usuario_Comum;
+import br.com.app.challenge.utils.LazyAdapter;
 
 public class List_Incident_Activity extends AppCompatActivity {
 
     Usuario_Comum mock_usuario_comum;
+
+    Integer[] imgid={
+            R.drawable.user_photo,
+            R.drawable.user_photo
+    };
+
+    String[] itemname ={
+            "Safari",
+            "Camera"
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +48,7 @@ public class List_Incident_Activity extends AppCompatActivity {
         mock_usuario_comum.addIncidentes(mock_incidente_ambiental);
         mock_usuario_comum.addIncidentes(mock_incidente_eletrico);
 
-        ArrayAdapter adapter = new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,
-                mock_usuario_comum.getIncidentesToStringArray());
+        LazyAdapter adapter = new LazyAdapter(this, itemname, imgid, imgid);
         ListView myReportsList = (ListView) findViewById(R.id.myReportsList);
         myReportsList.setAdapter(adapter);
 
