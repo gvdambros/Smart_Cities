@@ -83,8 +83,4 @@ public class Show_Incident_Activity extends FragmentActivity implements OnMapRea
         map.moveCamera(CameraUpdateFactory.newLatLng(poa));
     }
 
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-
-    }
 }

@@ -1,10 +1,10 @@
 package br.com.app.challenge.smart_cities;
 
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import android.support.v4.app.FragmentActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -13,7 +13,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class Near_Incident_Activity extends FragmentActivity implements OnMapReadyCallback {
+public class Near_Incident_Activity extends AppCompatActivity implements OnMapReadyCallback {
 
         GoogleMap map;
 
@@ -63,8 +63,4 @@ public class Near_Incident_Activity extends FragmentActivity implements OnMapRea
 
     }
 
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-
-    }
 }

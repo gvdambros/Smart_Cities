@@ -18,13 +18,12 @@ public class Incidente implements Serializable {
     Date dia_de_finalizacao;
     int numereros_de_joinhas;
     List<String> comentarios;
-    // Local //
     String nome;
     String descricao;
     Status_Do_Incidente status;
     String nome_autor;
 
-    public Incidente(Tipo_De_Incidente tipo, Date dia_do_incidente, /*Local,*/ String nome, String descricao, String nome_autor) {
+    public Incidente(Tipo_De_Incidente tipo, Date dia_do_incidente,  String nome, String descricao, String nome_autor) {
         this.id = gerador_de_id++;
         this.tipo = tipo;
         this.dia_do_incidente = dia_do_incidente;

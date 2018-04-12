@@ -9,17 +9,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import br.com.app.challenge.utils.Constants;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import br.com.app.challenge.model.Incidente;
-import br.com.app.challenge.model.Tipo_De_Incidente;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import br.com.app.challenge.utils.Constants;
+
+import br.com.app.challenge.model.Incidente;
+import br.com.app.challenge.model.Tipo_De_Incidente;
 import java.util.Date;
 
 public class ActivityCadastroIncidente extends FragmentActivity implements OnMapReadyCallback
@@ -38,8 +39,8 @@ public class ActivityCadastroIncidente extends FragmentActivity implements OnMap
 
             public void onClick(View view) {
             Date dia_do_incidente = new Date();
-            Incidente incidente = new Incidente(Tipo_De_Incidente.ELETRICO, dia_do_incidente, "Fios caidos");
-              //  Constants.mock_usuario_comum.addIncidentes(incidente);
+            //Incidente incidente = new Incidente(Tipo_De_Incidente.ELETRICO, dia_do_incidente, "Fios caidos");
+                //  Constants.mock_usuario_comum.addIncidentes(incidente);
             }
         });
         final ImageButton ibutton = (ImageButton) findViewById(R.id.ibCamera);
@@ -78,10 +79,6 @@ public class ActivityCadastroIncidente extends FragmentActivity implements OnMap
         map.moveCamera(CameraUpdateFactory.newLatLng(poa));
     }
 
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-
-    }
 }
 
 
