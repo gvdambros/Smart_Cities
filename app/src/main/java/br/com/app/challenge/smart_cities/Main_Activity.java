@@ -3,25 +3,11 @@ package br.com.app.challenge.smart_cities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.ListView;
-
-import java.util.Date;
-
-import br.com.app.challenge.model.Incidente;
-import br.com.app.challenge.model.Status_Do_Incidente;
-import br.com.app.challenge.model.Tipo_De_Incidente;
-import br.com.app.challenge.model.Usuario_Comum;
 
 /**
  * Created by gvdambros on 10/8/17.
@@ -46,7 +32,7 @@ public class Main_Activity extends AppCompatActivity {
         new_incident_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Main_Activity.this, ActivityTipoIncidente.class);
+                Intent intent = new Intent(Main_Activity.this, Register_Incident_Activity.class);
                 startActivity(intent);
             }
         });

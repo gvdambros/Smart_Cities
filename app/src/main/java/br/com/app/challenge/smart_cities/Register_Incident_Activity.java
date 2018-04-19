@@ -1,14 +1,15 @@
 package br.com.app.challenge.smart_cities;
 
 import android.content.Intent;
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -17,22 +18,22 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import br.com.app.challenge.utils.Constants;
-
-import br.com.app.challenge.model.Incidente;
-import br.com.app.challenge.model.Tipo_De_Incidente;
 import java.util.Date;
 
-public class ActivityCadastroIncidente extends FragmentActivity implements OnMapReadyCallback
+public class Register_Incident_Activity extends AppCompatActivity implements OnMapReadyCallback
 {
     GoogleMap map;
+
+    String[] tiposDeIncidentes = {"Elétrico", "Ambiental", "Lixo Urbano", "Saneamento", "Transporte"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_incidente);
-        final TextView tvlocal     = (TextView) findViewById(R.id.tvLocal);
-        final TextView tvdescricao = (TextView) findViewById(R.id.tvDescricao);
+
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(Register_Incident_Activity.this, android.R.layout.simple_list_item_1, tiposDeIncidentes);
+        AutoCompleteTextView actvTipoIncidente = (AutoCompleteTextView) findViewById(R.id.actvTipoIncidente);
+        actvTipoIncidente.setAdapter(arrayAdapter);
 
         final Button button = (Button)findViewById(R.id.rbCriarIncidente);
         button.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +49,7 @@ public class ActivityCadastroIncidente extends FragmentActivity implements OnMap
 
             public void onClick(View view) {
 
-                Intent k = new Intent(ActivityCadastroIncidente.this,AndroidCameraApi.class);
+                Intent k = new Intent(Register_Incident_Activity.this,Photograph_Incident_Activity.class);
                 startActivity(k);
             }
         });

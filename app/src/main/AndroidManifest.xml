@@ -86,7 +86,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ActivityTipoIncidente"
+            android:name=".Register_Incident_Activity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -94,15 +94,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ActivityCadastroIncidente"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".AndroidCameraApi"
+            android:name=".Photograph_Incident_Activity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
