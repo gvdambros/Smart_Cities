@@ -17,8 +17,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import br.com.app.challenge.model.Incidente;
-import br.com.app.challenge.utils.Constants;
+
+import br.com.app.challenge.model.Incident;
 
 public class Show_Incident_Activity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -30,8 +30,8 @@ public class Show_Incident_Activity extends FragmentActivity implements OnMapRea
         setContentView(R.layout.activity_show_incident);
         TextView description = (TextView) findViewById(R.id.incident_description);
 
-        Incidente mock_incident = (Incidente) getIntent().getSerializableExtra("Incident");
-        description.setText(mock_incident.getDescricao());
+        Incident mock_incident = (Incident) getIntent().getSerializableExtra("Incident");
+        description.setText(mock_incident.getDescription());
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map_view);
@@ -40,11 +40,14 @@ public class Show_Incident_Activity extends FragmentActivity implements OnMapRea
         ImageView foto = (ImageView) findViewById(R.id.user_photo_view);
         foto.setImageDrawable( resize( getDrawable(R.drawable.user_photo) ) );
 
-        TextView user_name_view = (TextView) findViewById(R.id.incident_name);
-        user_name_view.setText(mock_incident.getNome());
+        ImageView incidentPhoto = (ImageView) findViewById(R.id.incident_photo_view);
+        incidentPhoto.setImageDrawable( resize( getDrawable(mock_incident.getPhoto()) ) );
+
+        TextView user_name_view = (TextView) findViewById(R.id.incident_type);
+        user_name_view.setText(mock_incident.getType().toString());
 
         TextView user_mail_view = (TextView) findViewById(R.id.incident_author);
-        user_mail_view.setText("Incidente criado por " + mock_incident.getAutor());
+        user_mail_view.setText("Incident criado por " + mock_incident.getAutor());
 
     }
 

@@ -6,7 +6,7 @@ import br.com.app.challenge.smart_cities.R;
  * Created by gvdambros on 10/7/17.
  */
 
-public enum Status_Do_Incidente {
+public enum IncidentStatus {
     SOLICITADO, EM_ANDAMENTO, CONLUIDO;
 
     public String toString(){

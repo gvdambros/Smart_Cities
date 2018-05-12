@@ -7,7 +7,7 @@
     tools:context="br.com.app.challenge.smart_cities.Register_Incident_Activity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/incident_photo_view"
         android:layout_width="245dp"
         android:layout_height="113dp"
         android:visibility="visible"
@@ -77,7 +77,7 @@
         android:hint="Qual é seu problema?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/incident_photo_view" />
 
     <EditText
         android:id="@+id/etDescription"

@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -20,11 +21,18 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.Date;
 
+import br.com.app.challenge.model.Incident;
+import br.com.app.challenge.model.IncidentType;
+import br.com.app.challenge.model.CommonUser;
+import br.com.app.challenge.utils.Constants;
+
 public class Register_Incident_Activity extends AppCompatActivity implements OnMapReadyCallback
 {
     GoogleMap map;
 
     String[] tiposDeIncidentes = {"Elétrico", "Ambiental", "Lixo Urbano", "Saneamento", "Transporte"};
+
+    CommonUser mock_commonUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,18 +40,29 @@ public class Register_Incident_Activity extends AppCompatActivity implements OnM
         setContentView(R.layout.activity_cadastro_incidente);
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(Register_Incident_Activity.this, android.R.layout.simple_list_item_1, tiposDeIncidentes);
-        AutoCompleteTextView actvTipoIncidente = (AutoCompleteTextView) findViewById(R.id.actvTipoIncidente);
+        final AutoCompleteTextView actvTipoIncidente = (AutoCompleteTextView) findViewById(R.id.actvTipoIncidente);
         actvTipoIncidente.setAdapter(arrayAdapter);
+
+        EditText etDescription = (EditText) findViewById(R.id.actvTipoIncidente);
+        final String descriptionAsString = etDescription.getText().toString();
 
         final Button button = (Button)findViewById(R.id.rbCriarIncidente);
         button.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
+                IncidentType incidentType = null;
+
+                try{
+                    incidentType = IncidentType.fromString(actvTipoIncidente.getText().toString());
+                } catch (Exception e){
+                    e.printStackTrace();
+                }
             Date dia_do_incidente = new Date();
-            //Incidente incidente = new Incidente(Tipo_De_Incidente.ELETRICO, dia_do_incidente, "Fios caidos");
-                //  Constants.mock_usuario_comum.addIncidentes(incidente);
+            Incident incident = new Incident(incidentType, dia_do_incidente, descriptionAsString, "Gustavo", R.drawable.street_blackout) ;
+            Constants.mock_usuario_comun.addIncidentes(incident);
             }
         });
+
         final ImageButton ibutton = (ImageButton) findViewById(R.id.ibCamera);
         ibutton.setOnClickListener(new View.OnClickListener() {
 

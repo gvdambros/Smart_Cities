@@ -2,29 +2,25 @@ package br.com.app.challenge.smart_cities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.Date;
 
-import br.com.app.challenge.model.Incidente;
-import br.com.app.challenge.model.Status_Do_Incidente;
-import br.com.app.challenge.model.Tipo_De_Incidente;
-import br.com.app.challenge.model.Usuario_Comum;
+import br.com.app.challenge.model.Incident;
+import br.com.app.challenge.model.IncidentType;
+import br.com.app.challenge.model.CommonUser;
+import br.com.app.challenge.utils.Constants;
 import br.com.app.challenge.utils.LazyAdapter;
 
 public class List_Incident_Activity extends AppCompatActivity {
 
-    Usuario_Comum mock_usuario_comum;
-
+    //CommonUser mock_commonUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,24 +29,24 @@ public class List_Incident_Activity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mock_usuario_comum = new Usuario_Comum("Gustavo", "1234", "João Pessoa");
-        Incidente mock_incidente_ambiental = new Incidente(Tipo_De_Incidente.RUAS_E_CALCADAS, new Date(), "Buraco na rua", "A casa caiu.", mock_usuario_comum.getNome());
-        Incidente mock_incidente_eletrico = new Incidente(Tipo_De_Incidente.ELETRICO, new Date(), "Falta de luz na rua", "A casa caiu.", mock_usuario_comum.getNome());
-        mock_usuario_comum.addIncidentes(mock_incidente_ambiental);
-        mock_usuario_comum.addIncidentes(mock_incidente_eletrico);
+        final CommonUser mock_commonUser = Constants.mock_usuario_comun;
+        Incident mock_incident_ambiental = new Incident(IncidentType.TRANSPORTE, new Date(), "A casa caiu.", mock_commonUser.getName(), R.drawable.street_hole);
+        Incident mock_incident_eletrico = new Incident(IncidentType.ELETRICO, new Date(), "A casa caiu.", mock_commonUser.getName(), R.drawable.street_blackout);
+        mock_commonUser.addIncidentes(mock_incident_ambiental);
+        mock_commonUser.addIncidentes(mock_incident_eletrico);
 
         Integer[] imgid_r;
         Integer[] imgid_l;
         String[] itemname;
 
-        imgid_r = new Integer[mock_usuario_comum.getMeus_incidentes().size()];
-        imgid_l = new Integer[mock_usuario_comum.getMeus_incidentes().size()];
-        itemname = new String[mock_usuario_comum.getMeus_incidentes().size()];
+        imgid_r = new Integer[mock_commonUser.getMyIncidents().size()];
+        imgid_l = new Integer[mock_commonUser.getMyIncidents().size()];
+        itemname = new String[mock_commonUser.getMyIncidents().size()];
 
-        for(int i = 0; i < mock_usuario_comum.getMeus_incidentes().size(); i++){
-            imgid_r[i] = mock_usuario_comum.getMeus_incidentes().get(i).getStatus().toIconID();
-            imgid_l[i] = mock_usuario_comum.getMeus_incidentes().get(i).getTipo().toIconID();
-            itemname[i] = mock_usuario_comum.getMeus_incidentes().get(i).getTipo().toString();
+        for(int i = 0; i < mock_commonUser.getMyIncidents().size(); i++){
+            imgid_r[i] = mock_commonUser.getMyIncidents().get(i).getStatus().toIconID();
+            imgid_l[i] = mock_commonUser.getMyIncidents().get(i).getType().toIconID();
+            itemname[i] = mock_commonUser.getMyIncidents().get(i).getType().toString();
         }
 
         LazyAdapter adapter = new LazyAdapter(this, itemname, imgid_l, imgid_r);
@@ -61,8 +57,8 @@ public class List_Incident_Activity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 Intent intent = new Intent(List_Incident_Activity.this, Show_Incident_Activity.class);
-                mock_usuario_comum.getMeus_incidentes().get(position).setStatus(Status_Do_Incidente.CONLUIDO);
-                intent.putExtra("Incident", mock_usuario_comum.getMeus_incidentes().get(position));
+                //mock_commonUser.getMyIncidents().get(position).setStatus(IncidentStatus.CONLUIDO);
+                intent.putExtra("Incident", mock_commonUser.getMyIncidents().get(position));
                 startActivity(intent);
             }
         });
