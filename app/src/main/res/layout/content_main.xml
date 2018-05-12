@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="br.com.app.challenge.smart_cities.Main_Activity"
+    tools:context="br.com.app.challenge.activity.Main_Activity"
     tools:showIn="@layout/activity_main">
 
     <Button

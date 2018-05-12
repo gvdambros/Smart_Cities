@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="br.com.app.challenge.smart_cities.Photograph_Incident_Activity">
+    tools:context="br.com.app.challenge.activity.Photograph_Incident_Activity">
     <TextureView
         android:id="@+id/texture"
         android:layout_width="match_parent"

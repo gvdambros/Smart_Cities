@@ -1,4 +1,4 @@
-package br.com.app.challenge.smart_cities;
+package br.com.app.challenge.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -59,7 +59,7 @@ public class Register_Incident_Activity extends AppCompatActivity implements OnM
                 }
             Date dia_do_incidente = new Date();
             Incident incident = new Incident(incidentType, dia_do_incidente, descriptionAsString, "Gustavo", R.drawable.street_blackout) ;
-            Constants.mock_usuario_comun.addIncidentes(incident);
+            Constants.mockCommonUser.addIncidentes(incident);
             }
         });
 

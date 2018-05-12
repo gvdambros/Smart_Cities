@@ -1,4 +1,4 @@
-package br.com.app.challenge.smart_cities;
+package br.com.app.challenge.activity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;

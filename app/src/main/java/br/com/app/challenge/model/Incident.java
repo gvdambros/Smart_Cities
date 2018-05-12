@@ -10,8 +10,6 @@ import java.util.List;
 
 public class Incident implements Serializable {
 
-    static int gerador_de_id = 1;
-
     int id;
     IncidentType type;
     Date incidentDate;
@@ -23,7 +21,6 @@ public class Incident implements Serializable {
     Integer photo;
 
     public Incident(IncidentType type, Date incidentDate, String description, String author_name, Integer photo) {
-        this.id = gerador_de_id++;
         this.type = type;
         this.incidentDate = incidentDate;
         this.description = description;

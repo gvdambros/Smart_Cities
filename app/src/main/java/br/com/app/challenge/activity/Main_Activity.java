@@ -1,5 +1,5 @@
 
-package br.com.app.challenge.smart_cities;
+package br.com.app.challenge.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import br.com.app.challenge.service.CommonUserService;
+
 /**
  * Created by gvdambros on 10/8/17.
  */
@@ -16,6 +18,7 @@ import android.widget.Button;
 public class Main_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

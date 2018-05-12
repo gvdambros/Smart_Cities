@@ -1,4 +1,4 @@
-package br.com.app.challenge.smart_cities;
+package br.com.app.challenge.activity;
 
 import org.junit.Test;
 

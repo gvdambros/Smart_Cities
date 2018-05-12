@@ -1,4 +1,4 @@
-package br.com.app.challenge.smart_cities;
+package br.com.app.challenge.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

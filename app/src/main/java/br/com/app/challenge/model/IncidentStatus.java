@@ -1,6 +1,6 @@
 package br.com.app.challenge.model;
 
-import br.com.app.challenge.smart_cities.R;
+import br.com.app.challenge.activity.R;
 
 /**
  * Created by gvdambros on 10/7/17.

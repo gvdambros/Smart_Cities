@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="br.com.app.challenge.smart_cities.List_Incident_Activity">
+    tools:context="br.com.app.challenge.activity.List_Incident_Activity">
     <item
         android:id="@+id/near_incident"
         android:orderInCategory="100"

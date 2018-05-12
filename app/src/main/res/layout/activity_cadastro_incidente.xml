@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.com.app.challenge.smart_cities.Register_Incident_Activity">
+    tools:context="br.com.app.challenge.activity.Register_Incident_Activity">
 
     <ImageView
         android:id="@+id/incident_photo_view"

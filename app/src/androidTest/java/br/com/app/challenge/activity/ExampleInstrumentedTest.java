@@ -1,4 +1,4 @@
-package br.com.app.challenge.smart_cities;
+package br.com.app.challenge.activity;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

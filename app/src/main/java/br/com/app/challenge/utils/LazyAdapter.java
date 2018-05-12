@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import br.com.app.challenge.smart_cities.R;
+import br.com.app.challenge.activity.R;
 
 public class LazyAdapter extends ArrayAdapter<String> {
 
