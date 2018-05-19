@@ -9,13 +9,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import br.com.app.challenge.service.CommonUserService;
-
 /**
  * Created by gvdambros on 10/8/17.
  */
 
-public class Main_Activity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -26,7 +24,7 @@ public class Main_Activity extends AppCompatActivity {
         list_incident_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Main_Activity.this, List_Incident_Activity.class);
+                Intent intent = new Intent(MainActivity.this, List_Incident_Activity.class);
                 startActivity(intent);
             }
         });
@@ -35,7 +33,7 @@ public class Main_Activity extends AppCompatActivity {
         new_incident_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Main_Activity.this, Register_Incident_Activity.class);
+                Intent intent = new Intent(MainActivity.this, Register_Incident_Activity.class);
                 startActivity(intent);
             }
         });
@@ -44,7 +42,7 @@ public class Main_Activity extends AppCompatActivity {
         near_incident_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Main_Activity.this, Near_Incident_Activity.class);
+                Intent intent = new Intent(MainActivity.this, Near_Incident_Activity.class);
                 startActivity(intent);
             }
         });

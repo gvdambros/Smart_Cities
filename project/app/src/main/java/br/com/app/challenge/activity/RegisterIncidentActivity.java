@@ -26,7 +26,7 @@ import br.com.app.challenge.model.IncidentType;
 import br.com.app.challenge.model.CommonUser;
 import br.com.app.challenge.utils.Constants;
 
-public class Register_Incident_Activity extends AppCompatActivity implements OnMapReadyCallback
+public class RegisterIncidentActivity extends AppCompatActivity implements OnMapReadyCallback
 {
     GoogleMap map;
 

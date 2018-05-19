@@ -40,7 +40,7 @@ import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-public class Photograph_Incident_Activity extends AppCompatActivity {
+public class PhotographIncidentActivity extends AppCompatActivity {
     private static final String TAG = "Photograph_Incident_Activity";
     private Button takePictureButton;
     private TextureView textureView;

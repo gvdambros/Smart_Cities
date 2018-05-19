@@ -14,7 +14,7 @@ import br.com.app.challenge.model.CommonUser;
 import br.com.app.challenge.utils.Constants;
 import br.com.app.challenge.utils.LazyAdapter;
 
-public class List_Incident_Activity extends AppCompatActivity {
+public class ListMyIncidentsActivity extends AppCompatActivity {
 
     //CommonUser mock_commonUser;
 

@@ -20,7 +20,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import br.com.app.challenge.model.Incident;
 
-public class Show_Incident_Activity extends FragmentActivity implements OnMapReadyCallback {
+public class ShowMyIncidentActivity extends FragmentActivity implements OnMapReadyCallback {
 
     GoogleMap map;
 
