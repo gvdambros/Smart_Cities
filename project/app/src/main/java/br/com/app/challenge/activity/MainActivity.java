@@ -9,6 +9,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import br.com.app.challenge.service.CommonUserService;
 
 /**
@@ -50,6 +53,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Map map = new HashMap<String, String>();
+        map.put("email", "gustavo@wow.com.br");
+        map.put("password", "1234");
+        map.put("name", "gustavo@wow.com.br");
+        map.put("phone", "123456789");
+        map.put("experience", "1");
+
+        CommonUserService commonUserService = new CommonUserService();
+        commonUserService.login( map );
     }
 
 

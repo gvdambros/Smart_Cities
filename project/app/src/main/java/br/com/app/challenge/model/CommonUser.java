@@ -12,8 +12,8 @@ public class CommonUser extends User {
     int experience;
     List<Incident> myIncidents;
 
-    public CommonUser(String nome, String telefone, String endereco) {
-        super(nome, telefone, endereco);
+    public CommonUser(String email, String password, String nome, String telefone, String endereco) {
+        super(email, password, nome, telefone, endereco);
         experience = 0;
         myIncidents = new ArrayList<Incident>();
     }

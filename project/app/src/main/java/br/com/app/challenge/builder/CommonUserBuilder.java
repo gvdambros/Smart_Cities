@@ -11,7 +11,7 @@ public class CommonUserBuilder {
 
 
     public CommonUser buildMockUser (){
-        CommonUser mockCommonUser = new CommonUser("Gustavo Dambros", "(51)982294106", "Rua João Pessoa");
+        CommonUser mockCommonUser = new CommonUser("gvdambros@gmail.com", "12345", "Gustavo Dambros", "(51)982294106", "Rua João Pessoa");
         Incident mockAmbientalIncident = new Incident(IncidentType.TRANSPORTE, new Date(), "Buraco na minha rua.", mockCommonUser.getName(), R.drawable.street_hole);
         Incident mockEletricalIncident = new Incident(IncidentType.ELETRICO, new Date(), "Faltou luz no bairro Farroupilha.", mockCommonUser.getName(), R.drawable.street_blackout);
         mockCommonUser.addIncidentes(mockAmbientalIncident);

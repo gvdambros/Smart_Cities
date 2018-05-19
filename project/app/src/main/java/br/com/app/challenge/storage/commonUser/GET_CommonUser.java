@@ -11,44 +11,17 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 import br.com.app.challenge.model.CommonUser;
+import br.com.commons.storage.GET;
 
-public class GET_CommonUser extends AsyncTask<String, Void, CommonUser> {
+public class GET_CommonUser extends GET {
 
     @Override
-    protected CommonUser doInBackground(String... strings){
-        CommonUser commonUser = null;
-
-        URL url;
-        HttpURLConnection urlConnection = null;
-        StringBuilder result = new StringBuilder();
-        Gson gson = new Gson();
-
-        try {
-            url = new URL("http://192.168.0.105/getCommonUsers.php$?id=" + strings[0]);
-
-            urlConnection = (HttpURLConnection) url.openConnection();
-
-            InputStream in = urlConnection.getInputStream();
-
-            BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-
-            String line;
-            while ((line = reader.readLine()) != null) {
-                result.append(line);
-            }
-
-            commonUser = gson.fromJson(result.toString(), CommonUser.class);
-
-            System.out.println(result.toString());
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            if (urlConnection != null) {
-                urlConnection.disconnect();
-            }
-        }
-        return commonUser;
+    public String getURL() {
+        return "http://192.168.0.11/getCommonUsers.php";
     }
 
+    @Override
+    public Integer getSuccessfulResponse() {
+        return 200;
+    }
 }
