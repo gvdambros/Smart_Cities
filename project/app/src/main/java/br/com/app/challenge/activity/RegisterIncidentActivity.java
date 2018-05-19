@@ -39,7 +39,7 @@ public class RegisterIncidentActivity extends AppCompatActivity implements OnMap
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_incidente);
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(Register_Incident_Activity.this, android.R.layout.simple_list_item_1, tiposDeIncidentes);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(RegisterIncidentActivity.this, android.R.layout.simple_list_item_1, tiposDeIncidentes);
         final AutoCompleteTextView actvTipoIncidente = (AutoCompleteTextView) findViewById(R.id.actvTipoIncidente);
         actvTipoIncidente.setAdapter(arrayAdapter);
 
@@ -68,7 +68,7 @@ public class RegisterIncidentActivity extends AppCompatActivity implements OnMap
 
             public void onClick(View view) {
 
-                Intent k = new Intent(Register_Incident_Activity.this,Photograph_Incident_Activity.class);
+                Intent k = new Intent(RegisterIncidentActivity.this,PhotographIncidentActivity.class);
                 startActivity(k);
             }
         });

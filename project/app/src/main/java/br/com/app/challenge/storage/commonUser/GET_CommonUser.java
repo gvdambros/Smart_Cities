@@ -12,7 +12,7 @@ import java.net.URL;
 
 import br.com.app.challenge.model.CommonUser;
 
-public class CommonUserStorage extends AsyncTask<String, Void, CommonUser> {
+public class GET_CommonUser extends AsyncTask<String, Void, CommonUser> {
 
     @Override
     protected CommonUser doInBackground(String... strings){

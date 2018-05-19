@@ -5,12 +5,12 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import android.support.v4.app.FragmentActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -70,7 +70,7 @@ public class ShowMyIncidentActivity extends FragmentActivity implements OnMapRea
         int id = item.getItemId();
         if (id == R.id.near_incident) {
             // talvez seja pai do show
-            Intent intent = new Intent(Show_Incident_Activity.this, Near_Incident_Activity.class);
+            Intent intent = new Intent(ShowMyIncidentActivity.this, NearIncidentActivity.class);
             startActivity(intent);
             return true;
         }

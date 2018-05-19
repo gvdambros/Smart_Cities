@@ -4,9 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
@@ -44,7 +44,7 @@ public class ListMyIncidentsActivity extends AppCompatActivity {
         myReportsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                Intent intent = new Intent(List_Incident_Activity.this, Show_Incident_Activity.class);
+                Intent intent = new Intent(ListMyIncidentsActivity.this, ShowMyIncidentActivity.class);
                 intent.putExtra("Incident", mock_commonUser.getMyIncidents().get(position));
                 startActivity(intent);
             }
@@ -64,7 +64,7 @@ public class ListMyIncidentsActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.near_incident) {
-            Intent intent = new Intent(List_Incident_Activity.this, Near_Incident_Activity.class);
+            Intent intent = new Intent(ListMyIncidentsActivity.this, NearIncidentActivity.class);
             startActivity(intent);
             return true;
         }
