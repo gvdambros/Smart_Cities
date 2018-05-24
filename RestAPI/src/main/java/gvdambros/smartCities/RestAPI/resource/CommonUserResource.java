@@ -43,7 +43,7 @@ public class CommonUserResource {
 		commonUserService.delete(id);
 	}
 
-	@PostMapping("/students")
+	@PostMapping("/commonUsers")
 	public ObjectData<?> post(@RequestBody CommonUser commonUser) {
 		try {
 			CommonUser commonUserCreated = commonUserService.post(commonUser);

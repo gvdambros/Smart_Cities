@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         map.put("experience", "1");
 
         CommonUserService commonUserService = new CommonUserService();
-        commonUserService.login( map );
+        commonUserService.get( "" );
     }
 
 
