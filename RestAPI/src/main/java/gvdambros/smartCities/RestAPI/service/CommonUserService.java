@@ -58,4 +58,18 @@ public class CommonUserService {
 		} 
 
 	}
+
+	public CommonUser login(String email, String password) throws AppException {
+		try{
+			CommonUser commonUser = commonUserRepository.findByEmail(email);
+			if(!commonUser.getPassword().equals(password)) {
+				throw new AppException("Wrong password");
+			}
+			commonUser.erasePassword();
+			return commonUser;
+		} catch(Exception e) {
+			throw new AppException("Bad Request");
+		} 
+
+	}
 }

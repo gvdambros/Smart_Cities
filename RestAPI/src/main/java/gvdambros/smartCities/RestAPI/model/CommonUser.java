@@ -70,6 +70,10 @@ public class CommonUser {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+	
+	public void erasePassword() {
+		this.password = null;
+	}
 
 
 }

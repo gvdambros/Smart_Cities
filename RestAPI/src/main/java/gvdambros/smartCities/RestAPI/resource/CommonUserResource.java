@@ -27,6 +27,16 @@ public class CommonUserResource {
 		List<CommonUser> list = commonUserService.findAll();
 		return new ObjectDataBuilder<List<CommonUser>>().buildSucessful(list);
 	}
+	
+	@PostMapping("/commonUsers/login")
+	public ObjectData<?> login(@RequestBody CommonUser commonUser) {
+		try {
+			CommonUser commonUserLogin = commonUserService.login(commonUser.getEmail(), commonUser.getPassword());
+			return new ObjectDataBuilder<>().buildSucessful(commonUserLogin);
+		} catch(Exception e) {
+			return new ObjectDataBuilder<>().buildError(e);
+		}
+	}
 
 	@GetMapping("/commonUsers/{id}")
 	public ObjectData<?> get(@PathVariable Long id) {

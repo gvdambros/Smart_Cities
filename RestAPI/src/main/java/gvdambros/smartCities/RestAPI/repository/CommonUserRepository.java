@@ -8,4 +8,6 @@ import gvdambros.smartCities.RestAPI.model.CommonUser;
 @Repository
 public interface CommonUserRepository extends JpaRepository<CommonUser, Long>{
 
+	CommonUser findByEmail(String email);
+	
 }
