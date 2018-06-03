@@ -4,13 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Service;
 
 import gvdambros.smartCities.RestAPI.exception.AppException;
 import gvdambros.smartCities.RestAPI.model.CommonUser;
 import gvdambros.smartCities.RestAPI.repository.CommonUserRepository;
 
-@RestController
+@Service
 public class CommonUserService {
 
 	@Autowired
@@ -21,12 +21,12 @@ public class CommonUserService {
 	}
 
 	public CommonUser get(long id)  throws AppException {
-		Optional<CommonUser> student = commonUserRepository.findById(id);
+		Optional<CommonUser> commonUser = commonUserRepository.findById(id);
 
-		if (!student.isPresent())
+		if (!commonUser.isPresent())
 			throw new AppException("Bad Request");
 
-		return student.get();
+		return commonUser.get();
 	}
 
 	public void delete(long id) {
@@ -41,18 +41,18 @@ public class CommonUserService {
 		} 
 	}
 
-	public CommonUser put(CommonUser student, long id) throws AppException {
+	public CommonUser put(CommonUser commonUser, long id) throws AppException {
 
-		Optional<CommonUser> studentOptional = commonUserRepository.findById(id);
+		Optional<CommonUser> commonUserOptional = commonUserRepository.findById(id);
 
-		if (!studentOptional.isPresent()) {
+		if (!commonUserOptional.isPresent()) {
 			throw new AppException("Bad Request");
 		}
 
-		student.setId(id);
+		commonUser.setId(id);
 
 		try{
-			return commonUserRepository.save(student);
+			return commonUserRepository.save(commonUser);
 		} catch(Exception e) {
 			throw new AppException("Bad Request");
 		} 

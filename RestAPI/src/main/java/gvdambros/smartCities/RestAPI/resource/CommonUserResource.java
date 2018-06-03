@@ -14,13 +14,18 @@ import org.springframework.web.bind.annotation.RestController;
 import gvdambros.smartCities.RestAPI.builder.ObjectDataBuilder;
 import gvdambros.smartCities.RestAPI.data.ObjectData;
 import gvdambros.smartCities.RestAPI.model.CommonUser;
+import gvdambros.smartCities.RestAPI.model.Incident;
 import gvdambros.smartCities.RestAPI.service.CommonUserService;
+import gvdambros.smartCities.RestAPI.service.IncidentService;
 
 @RestController
 public class CommonUserResource {
 
 	@Autowired
 	private CommonUserService commonUserService;
+	
+	@Autowired
+	private IncidentService incidentService;
 
 	@GetMapping("/commonUsers")
 	public ObjectData<List<CommonUser>> getAll() {
@@ -72,4 +77,26 @@ public class CommonUserResource {
 			return new ObjectDataBuilder<>().buildError(e);
 		}
 	}
+	
+	@PostMapping("/commonUsers/{userId}/incidents")
+	public ObjectData<?> postIncident(@RequestBody Incident incident, @PathVariable long userId) {
+		try {
+			incident.setUserId(userId);
+			Incident incidentCreated = incidentService.post(incident);
+			return new ObjectDataBuilder<Incident>().buildSucessful(incidentCreated);
+		} catch(Exception e) {
+			return new ObjectDataBuilder<>().buildError(e);
+		}
+	}
+	
+	@GetMapping("/commonUsers/{userId}/incidents")
+	public ObjectData<?> getIncident(@PathVariable long userId) {
+		try {
+			List<Incident> incidents = incidentService.getByUserId(userId);
+			return new ObjectDataBuilder<List<Incident>>().buildSucessful(incidents);
+		} catch(Exception e) {
+			return new ObjectDataBuilder<>().buildError(e);
+		}
+	}
+	
 }

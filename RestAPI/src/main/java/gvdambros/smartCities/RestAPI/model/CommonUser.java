@@ -8,6 +8,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "common_users")
 public class CommonUser {
+	
 	@Id
 	@GeneratedValue
 	private Long id;
